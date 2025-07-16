@@ -12,19 +12,22 @@ def triangle_numbers():
         yield triangle
         n += 1
 
-def divisors(number: int) -> list[int]:
+
+def num_of_divisors(number: int) -> list[int]:
+    # Divisors come in pairs
+    # 1 and 28
+    # 2 and 14
+    # 4 and 7
     divs = []
     for x in range(1, int(math.sqrt(number)) + 1):
         if number % x == 0:
             divs.append(x)
             if x != number // x:
                 divs.append(number // x)
-    return divs
+    return len(divs)
+
 
 for triangle_number in triangle_numbers():
-    d = divisors(triangle_number)
-    print(f"{triangle_number} has {len(d)} divisors")
-    if len(d) >= 500:
-        print(d)
+    if num_of_divisors(triangle_number) >= 500:
         print(triangle_number)
         break
