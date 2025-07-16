@@ -4,7 +4,7 @@ import itertools
 
 
 def is_divisible_up_to_20(x: int) -> bool:
-    for i in range(2, 20):
+    for i in range(11, 20):
         if x % i != 0:
             return False
 
