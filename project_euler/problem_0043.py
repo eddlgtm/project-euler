@@ -20,7 +20,7 @@ def is_substring_divisible(number: int) -> bool:
 
     if len(number) != 10:
         return False
-    
+
     substring_1 = int(number[1] + number[2] + number[3]) % 2 == 0
     substring_2 = int(number[2] + number[3] + number[4]) % 3 == 0
     substring_3 = int(number[3] + number[4] + number[5]) % 5 == 0
