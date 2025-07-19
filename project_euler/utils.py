@@ -2,7 +2,7 @@ import math
 
 
 def is_prime(x: int) -> bool:
-    if x == 1:
+    if x <= 1:
         return False
 
     if x == 2:
