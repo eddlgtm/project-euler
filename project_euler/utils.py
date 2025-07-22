@@ -1,3 +1,4 @@
+from collections.abc import Sequence
 import math
 
 
@@ -65,3 +66,15 @@ def proper_divisors(number: int) -> list[int]:
     divs.remove(number)
 
     return divs
+
+
+def is_palindrome(number: int) -> bool:
+    return str(number) == str(number)[::-1]
+
+
+def reverse_number(number: int) -> int:
+    return int("".join([x for x in str(number)])[::-1])
+
+
+def last[T](l: Sequence[T]) -> T:
+    return l[-1]
